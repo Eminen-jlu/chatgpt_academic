@@ -1,12 +1,12 @@
 # API_KEY = "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" 此key无效
-API_KEY = "sk-此处填API秘钥"
+API_KEY = "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"
 API_URL = "https://api.openai.com/v1/chat/completions"
 
 # 改为True应用代理
-USE_PROXY = False
+USE_PROXY = True
 if USE_PROXY:
     # 代理网络的地址，打开你的科学上网软件查看代理的协议(socks5/http)、地址(localhost)和端口(11284)
-    proxies = { "http": "socks5h://localhost:11284", "https": "socks5h://localhost:11284", } 
+    proxies = { "http": "socks5h://localhost:42006", "https": "socks5h://localhost:42006", } 
     print('网络代理状态：运行。')
 else:
     proxies = None
@@ -25,5 +25,5 @@ MAX_RETRY = 2
 LLM_MODEL = "gpt-3.5-turbo"
 
 # 检查一下是不是忘了改config
-if API_KEY == "sk-此处填API秘钥":
+if API_KEY == "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":
     assert False, "请在config文件中修改API密钥, 添加海外代理之后再运行"
